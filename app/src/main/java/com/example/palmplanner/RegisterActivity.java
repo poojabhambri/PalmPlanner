@@ -1,16 +1,17 @@
 package com.example.palmplanner;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.Activity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+public class RegisterActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
 
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.register_page);
+
+
+    }
 
 }

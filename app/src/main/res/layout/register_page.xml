@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beige"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:id="@+id/registerText"
+        android:layout_width="194dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="140dp"
+        android:text="Register"
+        android:textColor="@color/light_blue"
+        android:textSize="50sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerText"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="24dp"
+        android:text="New Username:"
+        android:textColor="@color/light_blue"
+        android:textSize="40sp"
+        android:id="@+id/usernameText"/>
+
+    <Button
+        android:id="@+id/usernameButton"
+        android:layout_width="317dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="37dp"
+        android:text="Create a Username"
+        android:textAlignment="textStart"
+        android:textColor="@color/light_blue"
+        android:textSize="30sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Password:"
+        android:textSize="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="39dp"
+        android:layout_below="@+id/usernameButton"
+        android:textColor="@color/light_blue"
+        android:id="@+id/passwordText"
+
+        />
+
+    <Button
+        android:id="@+id/passwordButton"
+        android:layout_width="317dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="37dp"
+        android:text="Create a Password"
+        android:textAlignment="textStart"
+        android:textColor="@color/light_blue"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/okButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="40dp"
+        android:text="Create"
+        android:textColor="@color/light_blue"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/fishImage"
+        android:layout_width="108dp"
+        android:layout_height="99dp"
+        android:layout_below="@id/okButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="37dp"
+        android:src="@drawable/fish" />
+
+</RelativeLayout>
