@@ -31,21 +31,26 @@
         android:textSize="40sp"
         android:id="@+id/usernameText"/>
 
-    <Button
-        android:id="@+id/usernameButton"
+    <EditText
+        android:id="@+id/usernameEditText"
         android:layout_width="317dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_below="@id/usernameText"
         android:layout_alignParentStart="true"
+        android:singleLine="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="39dp"
         android:background="@drawable/login_buttons"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="37dp"
-        android:text="Enter Username"
-        android:textAlignment="textStart"
         android:textColor="@color/light_blue"
+        android:hint="Enter Username"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:scrollHorizontally="true"
+        android:textColorHint="@color/light_blue"
         android:textSize="30sp" />
+
    <TextView
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
@@ -53,34 +58,39 @@
        android:textSize="40sp"
        android:layout_marginTop="10dp"
        android:layout_marginStart="39dp"
-       android:layout_below="@+id/usernameButton"
+       android:layout_below="@+id/usernameEditText"
        android:textColor="@color/light_blue"
        android:id="@+id/passwordText"
 
        />
 
-    <Button
-        android:id="@+id/passwordButton"
+    <EditText
+        android:id="@+id/passwordEditText"
         android:layout_width="317dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
+        android:textColor="@color/light_blue"
         android:layout_below="@id/passwordText"
+        android:paddingStart="18dp"
+        android:ellipsize="end"
+        android:scrollHorizontally="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:singleLine="true"
         android:layout_marginStart="39dp"
         android:background="@drawable/login_buttons"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="37dp"
-        android:text="Enter Password"
-        android:textAlignment="textStart"
-        android:textColor="@color/light_blue"
+        android:hint="Enter Password"
+        android:textColorHint="@color/light_blue"
         android:textSize="30sp" />
 
     <Button
         android:layout_width="293dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/passwordButton"
+        android:layout_below="@+id/passwordEditText"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="150dp"
+        android:textAlignment="center"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="24dp"
         android:background="@android:color/transparent"
@@ -98,8 +108,9 @@
         android:layout_marginStart="39dp"
         android:layout_marginTop="2dp"
         android:text="Login"
-        android:backgroundTint="@color/beige"
-        android:textColor="@color/light_blue"
+        android:textAlignment="center"
+        android:backgroundTint="@color/light_blue"
+        android:textColor="@color/beige"
         android:textSize="34sp" />
 
     <ImageView
