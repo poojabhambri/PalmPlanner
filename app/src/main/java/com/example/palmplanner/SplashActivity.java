@@ -4,14 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
-import android.animation.ValueAnimator;
 import android.content.Intent;
-import android.graphics.Path;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.animation.AccelerateDecelerateInterpolator;
-import android.view.animation.OvershootInterpolator;
-import android.view.animation.PathInterpolator;
 import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
@@ -24,17 +20,14 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         TextView splashTitle = findViewById(R.id.splashTitle);
-        LottieAnimationView lottie = findViewById(R.id.lottie);
-        LottieAnimationView turtle = findViewById(R.id.turtle);
-//
-//        splashTitle.animate().translationY(-1400).setDuration(2700).setStartDelay(0);
-//        lottie.animate().translationX(2000).setDuration(2000).setStartDelay(2900);
+        LottieAnimationView lottie = findViewById(R.id.tree);
 
-        ObjectAnimator scaleUpX = ObjectAnimator.ofFloat(splashTitle, "scaleX", 2f);
+
+        ObjectAnimator scaleUpX = ObjectAnimator.ofFloat(splashTitle, "scaleX", 1.5f);
         scaleUpX.setDuration(1500);
         scaleUpX.setInterpolator(new AccelerateDecelerateInterpolator());
 
-        ObjectAnimator scaleUpY = ObjectAnimator.ofFloat(splashTitle, "scaleY", 2f);
+        ObjectAnimator scaleUpY = ObjectAnimator.ofFloat(splashTitle, "scaleY", 1.5f);
         scaleUpY.setDuration(1500);
         scaleUpY.setInterpolator(new AccelerateDecelerateInterpolator());
 
@@ -52,12 +45,12 @@ public class SplashActivity extends AppCompatActivity {
         scaleDownY.setInterpolator(new AccelerateDecelerateInterpolator());
 
         ObjectAnimator fadeOut = ObjectAnimator.ofFloat(splashTitle, "alpha", 0f);
-        fadeOut.setDuration(1500);
+        fadeOut.setDuration(1000);
         fadeOut.setInterpolator(new AccelerateDecelerateInterpolator());
 
-        // Chain the animations
+        // Chaining the title's animations
         AnimatorSet firstSet = new AnimatorSet();
-        firstSet.playTogether(scaleUpX, scaleUpY);
+        firstSet.playTogether(scaleUpX, scaleUpY, fadeIn);
 
         AnimatorSet secondSet = new AnimatorSet();
         secondSet.playTogether(scaleDownX, scaleDownY, fadeOut);
@@ -67,8 +60,8 @@ public class SplashActivity extends AppCompatActivity {
         animatorSet.start();
 
         ObjectAnimator fadeTreeOut = ObjectAnimator.ofFloat(lottie, "alpha", 1f, 0f);
-        fadeTreeOut.setDuration(1200); // Duration of the fade out animation
-        fadeTreeOut.setStartDelay(1200); // Start delay of 1.5 seconds (1500 milliseconds)
+        fadeTreeOut.setDuration(1000);
+        fadeTreeOut.setStartDelay(1500);
         fadeTreeOut.setInterpolator(new AccelerateDecelerateInterpolator());
         fadeTreeOut.start();
 
